@@ -1,7 +1,7 @@
-# scripts
+This program takes a JCR query as an input, runs against a given server, the nodes from the query output is then forward replicated.
 
-# Give full access
-chmod 777 replicateByQuery.sh
+#Give Scripts access
+chmod 777 ./replicateByQuery.sh
 
 #Example run: Replicate all nodes that were modified between 10-June-2016 to 14-june-2016.
 ./replicateByQuery.sh 
@@ -29,5 +29,4 @@ Press any key to start replicating.....
 
 Replication complete.
 
-#end of script run.
 
