@@ -8,6 +8,6 @@ chmod 775 ./componentUsageReport.sh
 
 What happens:
 
-1) Run a query and get a list of all Component on the Project.
-2) Loop though each component, and find the no. of pages using it.
-3) Also finds out if the page has been activated / deactivated / not-activated.
+* Run a query and get a list of all Component on the Project.
+* Loop though each component, and find the no. of pages using it.
+* Also finds out if the page has been activated / deactivated / not-activated.
