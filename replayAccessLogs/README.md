@@ -11,6 +11,9 @@ java RequestGenerator "absolute path to AEM access log" "command prefix"
 Example:
 java RequestGenerator "/AEM_HOME/logs/access.log" "curl -u 'uname':'pass' http://hostname" > output.sh
 
+Run the Shell file to flood the sever with requests.
+./output.sh
+
 This tool will come in handy when you load test. Parallel to this ensure you replicate a code package  at a certain frequency fully flush the dispatcher cache.
 This will ensure the Author and the Publish servers are fully tested.
 
