@@ -6,7 +6,7 @@ This process happens in 3 steps:
 3. Run output.sh to send requests to the servers.
 
 
-Command syntax:: java RequestGenerator <absolute path to AEM or Apache access log> <command prefix>
+Command syntax:: java RequestGenerator "absolute path to AEM or Apache access log" "command prefix"
 
 
 ::Example Usages::
