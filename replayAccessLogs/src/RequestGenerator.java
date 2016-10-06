@@ -36,8 +36,18 @@ public class RequestGenerator {
                 line = br.readLine();
             }
         } else {
-            System.out.println("\n**Access Log Replay**\n\nCommand syntax:: java RequestGenerator <absolute path to AEM access log> <command prefix>\n");
-            System.out.println("java RequestGenerator \"/aem/crx-quickstart/logs/access.log\" \"curl -u admin:admin https://v.author.tcom.corp.telstra.com\" > output.sh\n");
+            System.out.println(":::Access Replay:::\n");
+            System.out.println("This process happens in 3 steps:\n" +
+                    "1. Run the Java command, which will generate curl commands and write to a output.sh file.\n" +
+                    "2. Run chmod command on the output.sh to enable execute access.\n" +
+                    "3. Run output.sh to send requests to the servers.\n\n");
+            System.out.println("Command syntax:: java RequestGenerator <absolute path to AEM or Apache access log> <command prefix>\n");
+            System.out.println("\n::Example Usages::\n" +
+                    "For full response Use:  " +
+                    "\njava RequestGenerator \"/logs/access.log\" \"curl https://www.example.com\" > output.sh\n" +
+                    "\nFor HTTP output code use:  " +
+                    "\njava RequestGenerator \"/logs/access.log\" \"curl -I https://www.example.com\" > output.sh\n"
+            );
         }
     }
 }
