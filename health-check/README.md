@@ -30,10 +30,10 @@ mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>
 	
 ## Notes
 Notes:
+
 1.	Accessing http://localhost:4502/etc/healthcheck
 	a.	Returns: maintenance (or) normal
 2.	The resource type node: /etc/healthcheck points to: /apps/health-check/components/healthcheck/healthcheck.jsp
 	a.	This JSP invokes the OSGi HealthCheck service. Whether the service is in normal or maintenance can be set from an OSGi config.
-
 
 
