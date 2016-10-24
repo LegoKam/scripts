@@ -23,7 +23,7 @@ port=$5
 
 printf "\nProcessing........\n"
 
-rm -rf ./*.csv
+rm -rf ./draft.csv
 rm -rf ./*.out
 
 eval curl -G  --silent  -u ${upass} --data-urlencode \""stmt=/jcr:root${APP_PATH}//*[@jcr:primaryType = 'cq:Component']"\" --data-urlencode '_charset_=utf-8' --data-urlencode 'type=xpath' --data-urlencode 'showResults=true' 'http://${host}:${port}/crx/de/query.jsp' > query.out
@@ -42,7 +42,7 @@ while read FILE_PATH; do
 	  
 	  cat query1.out  | grep -o '"path":"[a-z._A-Z0-9/:-]*"' | grep -o '/[^"]*' > pages.out
 	  
-	  COUNT=$(wc -l pages.out)
+	  COUNT=$(wc -l pages.out | grep -Eo '[0-9]{1,9}')
 	  
 	  while read PAGE_PATH; do
 	  
@@ -54,7 +54,7 @@ while read FILE_PATH; do
 		
 		echo $PUB_STATUS
 
-		if ( "$PUB_STATUS" == "" ) then  
+		if [ -z "$PUB_STATUS" ]; then  
 		    PUB_STATUS="Not-Activated"
 		fi
 	  
@@ -64,7 +64,7 @@ while read FILE_PATH; do
 
 done <sort.out
 
-cat draft.csv | sed 's|\"jcr:title\":||' |  sed 's|\"total\":||' > final.csv
+cat draft.csv | sed 's|\"jcr:title\":||' |  sed 's|\"total\":||' >> final.csv
 
 printf "\nProcessing Complete. Output in file:: final.csv\n"
 #open ./final.csv
