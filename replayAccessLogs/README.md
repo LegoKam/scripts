@@ -1,4 +1,4 @@
-:::Access Replay:::
+:::Access Replay::: (Deprecated)
 
 This process happens in 3 steps:
 1. Run the Java command, which will generate curl commands and write to a output.sh file.
