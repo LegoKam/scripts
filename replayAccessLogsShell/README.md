@@ -4,7 +4,7 @@ Replays the URLs in the access log sending traffic to the server thats specified
 Note the access log assumes all URLs to be HTTP method:GET even if its a POST or anything else.
 
 **CAUTION**
-* First try with a small acces.log files (say:100 lines) to get the command right and also get an understanding of how it works before replaying a log file from production which at some customers could be well over a million lines.
+* First try with a small acces.log files (say:100 lines) to get the command right for your environment and also get an understanding of how it works before replaying a log file from production which at some customers could be well over a million lines.
 
 **Syntax:**
 ```
