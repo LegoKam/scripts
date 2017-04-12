@@ -3,6 +3,10 @@ This program generates a Component Usage report:
 #Give Scripts access
 chmod 775 ./componentUsageReport.sh
 
+#Component Usage Report Syntax
+./componentUsageReport.sh "/apps Path to Components" "/content Site root" "Username:Password" "Hostname" "Port"
+
+
 #Component Usage Report for Geometrixx Components
 ./componentUsageReport.sh "/apps/geometrixx" "/content/geometrixx" "admin:admin" "localhost" "4502"
 
