@@ -19,3 +19,6 @@ The output will be sent to results.csv file (for my example above):
 ```
 /projects/customer/log/results.<timestamp>.csv
 ```
+
+** CAUTION **
+* First try with a small acces.log files (say:100 lines) to get the command right and also get an understanding of how it works before replaying a log file from production which at some customers could be well over a million lines.
