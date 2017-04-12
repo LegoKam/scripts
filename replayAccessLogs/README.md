@@ -1,4 +1,5 @@
 :::Access Replay::: (Deprecated)
+New one available here: https://github.com/LegoKam/scripts/tree/master/replayAccessLogsShell
 
 This process happens in 3 steps:
 1. Run the Java command, which will generate curl commands and write to a output.sh file.
